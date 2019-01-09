@@ -30,3 +30,59 @@
     transform: rotate(360deg);
   }
 }
+
+
+ /*Declaring a flexbox*/
+#container{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100vh;
+    width : 75%;
+}
+/* Sidebar contains the search bar and the venue list */
+#sidebar {
+    width : 25%;
+}
+/* Input field */
+#search {
+   width:100%;
+   height: 20px;
+   font-size: 15px;
+}
+/* Venuelist */
+#venueList{
+   width:100%;
+   pointer-events: all;
+   pointer: cursor;
+  }
+/* Venuelist items */
+#listitem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    pointer: cursor;
+    border-style: ridge;
+    }
+
+/* Responsive design */
+@media (max-width: 550px) {
+  #container {
+    display: flex;
+    flex-flow: column;
+  }
+  #sidebar { width: 100%; }
+  #map { width: 100%; }
+  #search { font-size: 20px;}
+  #listitem { font-size: 20px;}
+}
+
+@media only screen and (min-width: 551px) and (max-width: 1028px) {
+  #search { font-size: 20px;}
+  #listitem { font-size: 20px;}
+}
